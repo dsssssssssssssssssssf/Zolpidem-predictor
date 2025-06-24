@@ -8,7 +8,7 @@ Original file is located at
 """
 
 import sys
-import matplotlib.font_manager as fm
+
 
 # Google Colab 환경에서만 실행되도록 함
 if 'google.colab' in sys.modules:
@@ -17,9 +17,7 @@ if 'google.colab' in sys.modules:
     os.system("sudo apt-get -qq -y install fonts-nanum")
 
     # 나눔 폰트 경로를 Matplotlib에 등록
-    font_files = fm.findSystemFonts(fontpaths=['/usr/share/fonts/truetype/nanum'])
-    for fpath in font_files:
-        fm.fontManager.addfont(fpath)
+   
 
 plt.rcParams['font.family'] = 'NanumGothic'    #사용 방법1
 plt.rc('font', family='NanumBarunGothic', size=11) #사용 방법2
